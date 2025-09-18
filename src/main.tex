@@ -1,0 +1,150 @@
+\documentclass[11pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{parskip}
+\usepackage{hyperref}
+
+% Page setup
+\geometry{
+    a4paper,
+    left=2.5cm,
+    right=2.5cm,
+    top=3cm,
+    bottom=3cm
+}
+
+% Fix header height
+\setlength{\headheight}{14pt}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Sponsoring Agreement}
+\fancyhead[R]{\sponsorName}
+\fancyfoot[C]{\thepage}
+
+% Include data file
+\input{data.tex}
+
+% Document
+\begin{document}
+
+% Title
+\begin{center}
+    \Large\textbf{SPONSORING AGREEMENT}\\[0.5cm]
+    \large Between \sponsorName{} and \sponsoredName\\[0.5cm]
+    \normalsize Date: \agreementDate
+\end{center}
+
+\vspace{1cm}
+
+% Parties section
+\section{Contracting Parties}
+
+\subsection{Sponsor}
+\begin{tabular}{@{}ll@{}}
+    \textbf{Company:} & \sponsorName \\
+    \textbf{Representative:} & \sponsorRepresentative, \sponsorTitle \\
+    \textbf{Address:} & \sponsorStreet \\
+                      & \sponsorPostalCode{} \sponsorCity \\
+                      & \sponsorCountry \\
+    \textbf{VAT ID:} & \sponsorVATID \\
+    \textbf{Phone:} & \sponsorPhone \\
+    \textbf{Email:} & \sponsorEmail \\
+\end{tabular}
+
+\subsection{Sponsored Entity}
+\begin{tabular}{@{}ll@{}}
+    \textbf{Organization:} & \sponsoredName \\
+    \textbf{Representative:} & \sponsoredRepresentative, \sponsoredTitle \\
+    \textbf{Address:} & \sponsoredStreet \\
+                      & \sponsoredPostalCode{} \sponsoredCity \\
+                      & \sponsoredCountry \\
+    \textbf{VAT ID:} & \sponsoredVATID \\
+    \textbf{Registration:} & \sponsoredRegistration \\
+    \textbf{Phone:} & \sponsoredPhone \\
+    \textbf{Email:} & \sponsoredEmail \\
+\end{tabular}
+
+% Agreement terms
+\section{Agreement Terms}
+
+\subsection{Sponsorship Details}
+The Sponsor agrees to provide financial support to the Sponsored Entity in the amount of \textbf{\sponsorshipAmount{} \sponsorshipCurrency} for the purpose of \sponsorshipPurpose.
+
+\subsection{Duration}
+This agreement is valid for a period of \agreementDuration{} starting from the date of signature.
+
+\subsection{Payment Terms}
+\paymentTerms. Invoices should be sent to:
+
+\invoiceAddress
+
+\subsection{Obligations of the Sponsored Entity}
+The Sponsored Entity agrees to:
+\begin{itemize}
+    \item Use the sponsorship funds exclusively for the stated purpose
+    \item Provide regular updates on the progress of sponsored activities
+    \item Acknowledge the Sponsor's support in relevant communications and materials
+    \item Provide receipts and documentation for expenses upon request
+\end{itemize}
+
+\subsection{Obligations of the Sponsor}
+The Sponsor agrees to:
+\begin{itemize}
+    \item Provide the agreed financial support in a timely manner
+    \item Respect the non-profit nature and mission of the Sponsored Entity
+    \item Not interfere with the operational independence of the Sponsored Entity
+\end{itemize}
+
+\section{General Provisions}
+
+\subsection{Termination}
+Either party may terminate this agreement with 30 days written notice. In case of termination, any unused funds must be returned to the Sponsor.
+
+\subsection{Amendments}
+Any amendments to this agreement must be made in writing and signed by both parties.
+
+\subsection{Governing Law}
+This agreement is governed by the laws of \jurisdiction.
+
+\subsection{Dispute Resolution}
+Any disputes arising from this agreement shall be resolved through negotiation. If negotiation fails, disputes will be resolved in the competent courts of \jurisdiction.
+
+% Signature section
+\vspace{2cm}
+
+\section{Signatures}
+
+\begin{minipage}[t]{0.45\textwidth}
+    \textbf{Sponsor}\\[1.5cm]
+    \rule{5cm}{0.4pt}\\
+    \sponsorRepresentative\\
+    \sponsorTitle\\
+    \sponsorName\\[0.5cm]
+    Place: \agreementLocation\\
+    Date: \rule{3cm}{0.4pt}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \textbf{Sponsored Entity}\\[1.5cm]
+    \rule{5cm}{0.4pt}\\
+    \sponsoredRepresentative\\
+    \sponsoredTitle\\
+    \sponsoredName\\[0.5cm]
+    Place: \agreementLocation\\
+    Date: \rule{3cm}{0.4pt}
+\end{minipage}
+
+\end{document}
